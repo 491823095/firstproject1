@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		//js写类，并继承
+		/*{
+		class parents{
+			constructor(name="大熊"){
+				this.name=name;
+			}
+		}
+	
+		
+
+		class child extends parents{
+			constructor(name,age){
+				super(name);
+				this.age=age;
+			}
+		}
+		let child1=new child("哆啦A梦",18);
+		alert(child1.name+child1.age);
+		}*/
+
+		//js的GET和SET
+	/*	{
+			class parent{
+				constructor(name="大熊"){
+					this.name=name;
+				}
+				//这就是get方法,但方法名不能与属性名一致
+				get aName(){
+					return this.name;
+				}
+				//这就是set方法，但方法名不能与属性名一致，且与get方法名一致
+				set aName(value){
+					this.name=value;
+				}
+			}
+			    //应用(set、get方法)
+			    let pp=new parent();
+			    pp.aName="哆啦A梦";
+			    alert(pp.aName);
+		}*/
+
+		//js的static
+		//方法
+		/*{
+			class parent{
+				constructor(name,age){
+					this.name=name;
+					this.age=age;
+				}
+				static tell(){
+					alert("你好");
+				}
+			}
+			//直接对象点方法
+			parent.tell();
+		}*/
+		//属性(有问题)
+		/*{
+			class parent{
+				constructor(name="大熊",age=18){
+					this.name=name;
+					this,age=age;
+				}
+			}
+			parent.type1="test1";
+			let pp=new parent();
+			console.log(pp.type1);
+			//静态属性不能被实例对象调用，即通过以new 操作符实例化后的对象调用，如上例中的obj调用，只能通过类名调用，即Obj调用
+		}*/
+
+		//方法调用的十种方法
+		//1.普通调用
+		/*{
+			function fn1(test){
+				console.log(test);
+			}
+			fn1("第一种调用，普通调用");
+		}*/
+		//2.call调用
+		/*{
+			function fn2(test){
+				console.log(test);
+			}
+			fn2.call(fn2,"第二种调用，call调用");
+		}*/
+		//3.apply调用
+		/*{
+			function fn3(test){
+				console.log(test);
+			}
+			fn3.apply(fn3,["第三种调用，apply调用"]);
+		}*/
+		//4.new调用
+		/*{
+			function fn4(test){
+				console.log(test);
+			}
+			new fn4("第四种调用，new调用");
+		}*/
+		//5.模板调用(有问题)
+		/*{
+			function fn5(test){
+				console.log(test);
+			};
+			fn5`第五种调用,模板调用`;
+		}*/
+		//6.定时调用(所有函数调用最后才运行的)
+		/*{
+			function fn6(test){
+				console.log(test);
+			}
+			setTimeout(fn6,0,"第六种调用，定时调用");
+		}*/
+		//7.普通函数转换未函数表达式调用
+		/*{
+			//函数表达式例子
+			const fun1=function(test){
+				console.log(test);
+			};
+			//普通转函数
+			(function fn2(test){console.log(test);})("转为函数表达式");
+		}*/
+		//8.普通函数调用
+		/*{
+			const fun1=function(test){console.log(test);};
+			fun1("普通函数调用");
+		}*/
+		//9.
+		{
+			const fun1=function(test){
+				console.log(test);
+			}("第九种");
+		}
+		//10
+		{
+			const fn3=new function{
+				x,y,console.log(x+y);
+			}("");
+		}
+
+
+	</script>
+</body>
+</html>
